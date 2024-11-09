@@ -1,0 +1,46 @@
+<%- include Partials/header.ejs %>
+<%- include Partials/main_nav.ejs %>
+<!--Content visible in the browser's window is inside the HTML element-->
+
+    <!--All body content encloses with ID wrapper -->
+    <div id="wrapper">
+        <!--The banner ID style is inside the wrapper ID-->
+        <div id="banner">
+            <h1>All About Me</h1>
+            
+        </div>
+        <img src="/Assests/images/dbead602ac6cd97966d8016404d6ef6ae9581fb268118a7723d41fd07272a755.0.png" alt="image">
+        <!--Parameters inside video tag-->
+        <video id="myvid" width="400" height="210" controls preload="auto"   muted loop>
+            <source src="/Assests/videos/20240930_222550.mp4" type="video/mp4">
+
+        </video>
+        <!--Adding information aside-->
+        <aside>
+                This is the video of me that I'm
+                introducing to myself.
+        </aside>
+        <div id="aside">
+                And also in this video I'm talking about
+                building up my skills for my
+                future career.   
+         </div>
+         <div class="aside">
+             <img src="Blank 2 Grids Collage.jpg" alt="image">
+         </div>
+        <button onclick="PlayPause()">Play/Pause</button>
+        <script>
+            var myvidbtn = document.getElementById("myvid");
+            function PlayPause()
+
+            {
+                if (myvidbtn.paused)
+                    myvidbtn.play();
+                else
+                    myvidbtn.pause();
+            }
+        </script>
+        <!--Style for the video, button, and image-->
+
+    </div>
+    <%- include Partials/footer.ejs %>
